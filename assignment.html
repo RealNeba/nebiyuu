@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>popup menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color:lightblue;
+            background-repeat: no-repeat;
+            background-size: cover;
+			
+        }
+		footer{
+        background-color: rgb(103, 113, 118);
+        justify-content: center;
+        justify-items: center;
+        padding-left: -1%;
+        font-style: italic;
+        image-orientation: from-image;
+    }
+        
+        img {
+            width: 100%;
+            height: 60%;
+            border-radius: 4px;
+        }
+        
+        img:hover {
+            zoom: 120%;
+        }
+        
+        nav {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(237, 26, 26);
+            font-size: 20px;
+        }
+        /* Style the navigation bar */
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color:#1fd1f9;
+            padding: 10px;
+        }
+        /* Style the menu button */
+        
+        .menu-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 20%;
+            padding: 1%;
+            border: 2px solid black;
+        }
+        /* Style the popup window */
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 150px;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 50%;
+            background-color:aqua;
+            border: 1px solid;
+            box-shadow: 5px 5px 10px blue;
+            display: none;
+            border-radius: 7%;
+        }
+        /* Style the close button */
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        /* Style the page options */
+        
+        .page-options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .page-option :hover {
+            background-color: aqua;
+        }
+        /* Style the page links */
+        
+        .page-link {
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        
+        ul li {
+            display: inline-block;
+            margin: 10px;
+            list-style: none;
+        }
+        
+        ul li:hover {
+            padding-left: 30px;
+            font-size: large;
+            background-color:lightblue;
+        }
+        
+        marquee {
+            font-size: 30px;
+            font-family: ariale;
+            font-size: 45px;
+            color:red;
+        }
+        
+        .logo img {
+            width: 90px;
+            height: 70px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <label class="logo"> <img src="IMG_20240511_083727.jpg" alt="">
+              <b>DEBRE MARKOS GENERAL SECONDARY SCHOOL</b>  
+            </label>
+			
+        </nav>
+    </header>
+    <div class="navbar">
+        <!-- Menu button -->
+        <div class="menu-btn" onclick="showPopup()">
+            <svg height="24" width="24" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      </svg>
+        </div>
+    </div>
+    <!-- Popup window -->
+    <div class="popup" id="popup">
+        <!-- Close button -->
+        <div class="close-btn" onclick="hidePopup()">
+            <svg height="24" width="24" fill="black" viewBox="0 0 24 24" xmlns=>
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+      </svg>
+        </div>
+        <!-- Page options -->
+        <ul class="page-options">
+            <li class="dropdown"><a class="active" href="home.html">Home</a>
+                <div class="dropdown-content">
+                    <a href="info.html">historical background</a>
+                </div>
+            </li>
+            <li class="dropdown"><a class="active" href="#">contact us</a>
+                <div class="dropdown-content">
+                    <a href="mn.html">Mobile Number</a>
+                    <a href="email.html">Email</a>
+                    <a href="pobox.html">P.O.Box</a>
+                    <a href="fax.html">fax</a>
+                </div>
+            </li>
+            <li><a href="imag.html" class="page-link"> Images</a></li>
+            <li><a href="locat.html" class="page-link"> Location</a></li>
+			<li><a href="comment.html" class="page-link">comment</a></li>
+            <li><a href="devdby.html" class="page-link">developed by</a></li>
+			<li><a href="register.html" class="page-link">register</a></li>
+            <li><a href="rate.html" class="page-link">rate us</a></li>
+        </ul>
+    </div>
+	<div>
+	
+
+
+    <br>
+	
+        </menu>
+		
+    
+    <h1><b><marquee>WELCOME TO OUR WEBSITE!!!</marquee></h1>
+	
+	
+
+
+   
+		
+	
+
+</body>
+ <script>
+        // Add your JS code here
+
+        // Get the popup element
+        var popup = document.getElementById("popup");
+
+        // Function to show the popup
+        function showPopup() {
+            popup.style.display = "block";
+        }
+
+        // Function to hide the popup
+        function hidePopup() {
+            popup.style.display = "none";
+        }
+    </script>
+<br>
+<br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttons</title>
+    <link rel="stylesheet" href="style(3).css">
+</head>
+
+<body>
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    </header>
+
+    <h1>Choose From Options </h1>
+    <p>All In One!!!</p>
+    <div class="frame">
+        <button class="custom-btn btn-1"><a class="active" href="home.html">HOME</button></a>
+        <button class="custom-btn btn-2"><a href="info.html">History</button></a>
+        <button class="custom-btn btn-3"><span> <a href="mn.html">Mobile Number</a></span></button>
+        <button class="custom-btn btn-4"><span>  <a href="email.html">Email</a></span></button>
+        <button class="custom-btn btn-5"><span></span><a href="pobox.html">P.O.Box</a></button>
+        <button class="custom-btn btn-6"><span><a href="fax.html">fax</a></span></button>
+        <button class="custom-btn btn-7"><span><a href="imag.html" class="page-link"> Images</a></span></button>
+        <button class="custom-btn btn-8"><span><a href="locat.html" class="page-link"> Location</a</span></button>
+        <button class="custom-btn btn-9"><span><a href="comment.html" class="page-link">comment</a></span></button>
+        <button class="custom-btn btn-10"><span><a href="devdby.html" class="page-link">developed by</a></span></button>
+         <button class="custom-btn btn-11"><span><a href="register.html" class="page-link">Register</a></span></button>
+		  <button class="custom-btn btn-9"><span><a href="rate.html" class="page-link">Rate us</a></span></button>
+		 
+        <p style="font-family: Andale Mono, monospace;">
+            By : GROUP MEMBERS</p>
+    </div>
+<footer>
+<p>
+<br><br><br>
+        <h4>Adress=D,m.</h4>
+    </p>
+</footer>
+
+
+</html>

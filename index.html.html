@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        #loading-bar-container {
+            width: 80%;
+            background: transparent;
+            border-radius: 10px;
+            border-style: none;
+            top: 0;
+            bottom: 100%;
+            align-items: center;
+            justify-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        
+        #loading-bar {
+            width: 0%;
+            height: 16px;
+            background: red;
+            text-align: center;
+            line-height: 15px;
+            color: white;
+            border-radius: 10px;
+            border-style: none;
+            top: 100%;
+            bottom: 0%;
+        }
+        
+        body {
+            background-color: blue;
+        }
+        
+        h1 {
+            padding-left: ;
+            padding-right: ;
+            font-size: 40px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>LOADING WEBSITE PLEASE WAIT.......</h1>
+
+        <br>
+
+
+    </div>
+
+    <div id="loading-bar-container">
+        <div id="loading-bar">0%</div>
+    </div>
+
+    <script>
+        let width = 0;
+        let interval = setInterval(function() {
+            width++;
+            let bar = document.getElementById('loading-bar');
+            bar.style.width = width + '%';
+            bar.textContent = width + '%';
+            if (width >= 100) {
+                clearInterval(interval);
+                window.location.href = 'assignment.html.'; // Replace with your target URL
+            }
+        }, 60); // Adjust speed as necessary
+    </script>
+
+</body>
+
+</html>
